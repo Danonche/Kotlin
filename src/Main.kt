@@ -156,6 +156,12 @@ fun main() {
         else println("$el <- это число меньше или равно 10")
 
         }
+
+// Как узнать индекс каждого элемента массива?
+    names.forEachIndexed{index, element ->
+        println("$element индекс этого элемента = $index ")
+
+    }
     }
 
 
