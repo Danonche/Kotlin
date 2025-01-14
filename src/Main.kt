@@ -101,11 +101,64 @@ fun main() {
         println("$i file is downloaded..") // &1 выведет в консоль значение i
     }
     println("finished")
+    /*Основная разница между этими двумя циклами, в том, что while сразу проверяет переменную на условие,
+    а do while сначала сделает действие как минимум 1 раз, а потом уже будет проверять условие*/
+
+    // массивы
+
+    // явное указание типа массива
+    var listt: Array<Int> = arrayOf(10,11,12,13)
+    var namess: Array<String> = arrayOf("Peter", "Anna", "Bob")
+    var booll: Array<Boolean> = arrayOf(true , false)
+
+    // Автоматическое определение типа массива (можно и так и так)
+    var list = arrayOf(9,10,11,12,13)
+    var names = arrayOf("Peter", "Anna", "Bob")
+    var bool = arrayOf(true , false)
+
+    // вывод элемента массива
+    println(list[1])
+    println(names[2])
+
+    // выводи элемента массива 2 вариант   через встроенную функцию get
+    println(names.get(1))
+
+    // Rак перезаписать значение в элемент массива?
+    // 1 вариант
+    names[1] = "Dora"
+    println(names[1])
+
+    //2 вариант:
+
+    names.set(1,"Kira")  // тут использована встроенная функция set
+    println(names.get(1))
+
+    //Как узнать количество элементов?
+    println(list.size)
 
 
+// вывод всех элементов массива через цикл for
+    //1 способ
+    for (i in names){
+        println(i)
     }
-/*Основная разница между этими двумя циклами, в том, что while сразу проверяет переменную на условие,
-а do while сначала сделает действие как минимум 1 раз, а потом уже будет проверять условие*/
+    // 2 способ с forEach (такой способ более предпочтительный)
+    names.forEach{ elem ->
+        if (elem !="Bob")  // Сюда можно встраивать любые проверки
+            print("Hallo, ")
+        println(elem)
+    }
+
+
+    list.forEach{ el ->
+        if (el > 10)
+            println(" $el <- это число больеше 10")
+        else println("$el <- это число меньше или равно 10")
+
+        }
+    }
+
+
 
 
 
