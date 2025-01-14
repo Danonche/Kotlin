@@ -74,7 +74,7 @@ fun main() {
 // в условии можно использовать оператор "или" ||
 
 // Рассмотрим условие when, его используем когда(негласное правило) есть выбор из более чем 5 вариантов
-    var dayOfWeek = "Пятниц"
+    var dayOfWeek = "Пятница"
     when (dayOfWeek){
         "Понедельник" -> println("Сегодня Понедельник")
         "Вторник" -> println("Сегодня Вторник")
@@ -86,6 +86,20 @@ fun main() {
         else -> println("Такого дня нет")
 
         }
+// циклы while , do while
+    var isDownloaded = true
+        //while (!isDownloaded){
+        //println("file is downloaded...")
+    do {
+        println("file is downloaded..")
+    }
+    while(!isDownloaded)
+    println("finished")
 
     }
+/*Основная разница между этими двумя циклами, в том, что while сразу проверяет переменную на условие,
+а do while сначала сделает действие как минимум 1 раз, а потом уже будет проверять условие*/
+
+
+
 
