@@ -90,11 +90,18 @@ fun main() {
     var isDownloaded = true
         //while (!isDownloaded){
         //println("file is downloaded...")
-    do {
-        println("file is downloaded..")
+//    do {
+//        println("file is downloaded..")
+//    }
+//    while(!isDownloaded)
+//    println("finished")
+
+    for (i in 1..10 step 2) /* можно идти обратно от большего к меньшему "for (i in 100 downTo 1)"*/
+    {
+        println("$i file is downloaded..") // &1 выведет в консоль значение i
     }
-    while(!isDownloaded)
     println("finished")
+
 
     }
 /*Основная разница между этими двумя циклами, в том, что while сразу проверяет переменную на условие,
