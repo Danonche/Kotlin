@@ -162,7 +162,73 @@ fun main() {
         println("$element индекс этого элемента = $index ")
 
     }
-    }
+//Строковый тип и работа с ним
+    val s = "Hello World!"
+    println(s[0])
+    println(s[1])
+    println(s[s.length-1])
+
+    println(s.first())
+    println(s.last())
+
+    val cardNumber = "1234 6789 6784 9489"
+    println(cardNumber.startsWith("1234"))
+    println(cardNumber.endsWith("1248"))
+
+    println("The length of 'Hello World!' is ${s.length}") // пример использывания функции вместе с $
+    println("The length of \"Hello World!\" is ${s.length}") // пример экранирования кавычек
+    println("The length of \"Hello World!\" \nis ${s.length}") // Пример переноса строки оператор \n
+
+    // кстати функция println уже содержит в себе перенос строки
+
+    val name = "john"
+    val Name = "John"
+    val CapName = name.capitalize() // функция сделает слово с большой буквы
+    val DecName = name.decapitalize() // функция сделает слово с маленькой буквы
+    val TupName = name.toUpperCase()
+    val TulName = name.toLowerCase()
+
+
+    println(CapName)
+    println(DecName)
+    println(TupName)
+    println(TulName)
+
+    val Name1 = "раор"
+    println(Name1.isEmpty()) // вернет true если пустое значение
+    println(Name1.isBlank())// вернет true если нет полезных символов
+
+    val Name2 = " John Smith "
+    val TrName = Name2.trim() //функция обрезает пробелы в начале и конеце
+    val TrsName = Name2.trimStart()//функция обрезает пробел в начале
+    val TreName = Name2.trimEnd()//функция обрезает пробел в конеце
+
+    println(TrName)
+    println(TrsName)
+    println(TreName)
+
+    val st = "Today today morning today today sunday"
+    val st2 = st.replace("today","*") // функция заменяет  слова в предложении
+    val st3 = st.toLowerCase().replace("today","*") // на примере применение 2 функций одновременно
+
+    println(st2)
+    println(st3)
+
+    val list1 = "Today,today,morning,today,today,sunday"
+    val arr =  list1.split(",") // split делает из стринги массив
+    println(arr)
+
+
+    val sg = readln() // функция ввода
+    println(sg.toUpperCase())
+
+
+
+
+
+
+
+}
 
 
 
